@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg_color"
+    tools:context=".Activity.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="48dp"
+                android:contentDescription="@null"
+                android:src="@drawable/profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Hi, Tom"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+                app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                app:layout_constraintTop_toTopOf="@id/ivAvatar" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/navy_bg"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivAvatar">
+
+                <ImageView
+                    android:id="@+id/ivGarnet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/garnet"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvGarnet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="240"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/ivGarnet"
+                    app:layout_constraintStart_toEndOf="@id/ivGarnet"
+                    app:layout_constraintTop_toTopOf="@id/ivGarnet" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/plus"
+                    app:layout_constraintBottom_toBottomOf="@id/ivGarnet"
+                    app:layout_constraintStart_toEndOf="@id/tvGarnet"
+                    app:layout_constraintTop_toTopOf="@id/ivGarnet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/consCreateQuiz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/navy_bg"
+                android:paddingVertical="35dp"
+                app:layout_constraintEnd_toStartOf="@id/constSinglePlayer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivAvatar"
+
+                app:layout_constraintWidth_percent="0.28">
+
+                <ImageView
+                    android:id="@+id/ivCreateQuiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/btn1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCreateQuiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Create Quiz"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivCreateQuiz" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constSinglePlayer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/navy_bg"
+                android:paddingVertical="35dp"
+                app:layout_constraintBottom_toBottomOf="@id/consCreateQuiz"
+                app:layout_constraintEnd_toStartOf="@id/constMultiPlayer"
+                app:layout_constraintStart_toEndOf="@id/consCreateQuiz"
+                app:layout_constraintTop_toTopOf="@id/consCreateQuiz"
+
+                app:layout_constraintWidth_percent="0.28">
+
+                <ImageView
+                    android:id="@+id/ivCreateQuiz1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/btn2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCreateQuiz1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Single Player"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivCreateQuiz1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constMultiPlayer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/navy_bg"
+                android:paddingVertical="35dp"
+                app:layout_constraintBottom_toBottomOf="@id/consCreateQuiz"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/constSinglePlayer"
+                app:layout_constraintTop_toBottomOf="@id/ivAvatar"
+                app:layout_constraintTop_toTopOf="@id/consCreateQuiz"
+                app:layout_constraintWidth_percent="0.28">
+
+                <ImageView
+                    android:id="@+id/ivCreateQuiz2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/btn3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCreateQuiz2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Multi Player"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivCreateQuiz2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvQuizCategories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="Quiz Categories"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/tvSeeAll"
+                app:layout_constraintStart_toStartOf="@id/consCreateQuiz"
+                app:layout_constraintTop_toBottomOf="@id/consCreateQuiz" />
+
+            <TextView
+                android:id="@+id/tvSeeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See all"
+                android:textColor="@color/blue"
+                app:layout_constraintBottom_toBottomOf="@id/tvQuizCategories"
+                app:layout_constraintEnd_toEndOf="@id/constMultiPlayer"
+                app:layout_constraintTop_toTopOf="@id/tvQuizCategories" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constScience"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/navy_bg"
+                android:padding="18dp"
+                app:layout_constraintStart_toStartOf="@id/consCreateQuiz"
+                app:layout_constraintTop_toBottomOf="@id/tvQuizCategories"
+                app:layout_constraintWidth_percent="0.43">
+
+                <ImageView
+                    android:id="@+id/ivScience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/cat1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="Science"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/ivScience"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivScience"
+                    app:layout_constraintTop_toTopOf="@id/ivScience" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/navy_bg"
+                android:padding="18dp"
+                app:layout_constraintBottom_toBottomOf="@id/constScience"
+                app:layout_constraintEnd_toEndOf="@id/constMultiPlayer"
+                app:layout_constraintTop_toTopOf="@id/constScience"
+                app:layout_constraintWidth_percent="0.43">
+
+                <ImageView
+                    android:id="@+id/ivHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/cat2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="History"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/ivHistory"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivHistory"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constSport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/navy_bg"
+                android:padding="18dp"
+                app:layout_constraintStart_toStartOf="@id/constScience"
+                app:layout_constraintTop_toBottomOf="@id/constScience"
+                app:layout_constraintWidth_percent="0.43">
+
+                <ImageView
+                    android:id="@+id/ivSport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/cat3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="Sport"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/ivSport"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivSport"
+                    app:layout_constraintTop_toTopOf="@id/ivSport" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constArt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/navy_bg"
+                android:padding="18dp"
+                app:layout_constraintBottom_toBottomOf="@id/constSport"
+                app:layout_constraintEnd_toEndOf="@id/constHistory"
+                app:layout_constraintTop_toTopOf="@id/constSport"
+                app:layout_constraintWidth_percent="0.43">
+
+                <ImageView
+                    android:id="@+id/ivArt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/cat4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="Art"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/ivArt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivArt"
+                    app:layout_constraintTop_toTopOf="@id/ivArt" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constAds"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/navy_blue_bg"
+                app:layout_constraintEnd_toEndOf="@id/constArt"
+                app:layout_constraintStart_toStartOf="@id/constSport"
+                app:layout_constraintTop_toBottomOf="@id/constSport">
+
+                <ImageView
+                    android:id="@+id/ivBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:src="@drawable/arcs" />
+
+                <ImageView
+                    android:id="@+id/ivCoins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@null"
+                    android:padding="10dp"
+                    android:src="@drawable/coins"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Complete All Levels To\n Earn 100 Coins"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/ivCoins"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_blue_bg"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="Start Now"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvAds"
+                    app:layout_constraintTop_toBottomOf="@id/tvAds" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottomMenu"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bottom_bg"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:cnb_iconSize="20dp"
+        app:cnb_menuResource="@menu/bottom_menu"
+        app:cnb_radius="50dp"
+        app:cnb_unselectedColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.95" />
+</androidx.constraintlayout.widget.ConstraintLayout>

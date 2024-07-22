@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg_color"
+    tools:context=".Activity.LeaderActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnWeekly"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/light_blue_bg"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:paddingHorizontal="22dp"
+                android:paddingVertical="15dp"
+                android:text="Weekly"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/btnMonthly"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.27" />
+
+            <TextView
+                android:id="@+id/btnMonthly"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/white_bg"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:paddingHorizontal="22dp"
+                android:paddingVertical="15dp"
+                android:text="Monthly"
+                android:textColor="@color/navy_blue"
+                app:layout_constraintEnd_toStartOf="@id/btnAllTime"
+                app:layout_constraintStart_toEndOf="@id/btnWeekly"
+                app:layout_constraintTop_toTopOf="@id/btnWeekly"
+                app:layout_constraintWidth_percent="0.27" />
+
+            <TextView
+                android:id="@+id/btnAllTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_bg"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:paddingHorizontal="22dp"
+                android:paddingVertical="15dp"
+                android:text="All Time"
+                android:textColor="@color/navy_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnMonthly"
+                app:layout_constraintTop_toTopOf="@id/btnWeekly"
+                app:layout_constraintWidth_percent="0.27" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivThirdLiner"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:padding="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivFirstLiner"
+                app:layout_constraintEnd_toStartOf="@id/ivFirstLiner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivFirstLiner"
+                app:shapeAppearanceOverlay="@style/CircleImageview"
+                app:strokeColor="#AC844E"
+                app:strokeWidth="3dp" />
+
+
+            <TextView
+                android:id="@+id/tvThirdBadge"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/circle_top_third"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivThirdLiner"
+                app:layout_constraintEnd_toEndOf="@id/ivThirdLiner"
+                app:layout_constraintStart_toStartOf="@id/ivThirdLiner"
+                app:layout_constraintTop_toBottomOf="@id/ivThirdLiner" />
+
+            <TextView
+                android:id="@+id/tvThirdsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sophia"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvThirdBadge"
+                app:layout_constraintStart_toStartOf="@id/tvThirdBadge"
+                app:layout_constraintTop_toBottomOf="@id/tvThirdBadge" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scoreThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/score_top_third_bg"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="7dp"
+                app:layout_constraintEnd_toEndOf="@id/tvThirdsName"
+                app:layout_constraintStart_toStartOf="@id/tvThirdsName"
+                app:layout_constraintTop_toBottomOf="@id/tvThirdsName">
+
+                <ImageView
+                    android:id="@+id/ivScore3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/garnet"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvScore3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvScore3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="4401"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/ivScore3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivScore3"
+                    app:layout_constraintTop_toTopOf="@id/ivScore3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivFirstLiner"
+                android:layout_width="137dp"
+                android:layout_height="137dp"
+                android:layout_marginTop="63dp"
+                android:padding="1dp"
+                app:layout_constraintEnd_toEndOf="@id/btnAllTime"
+                app:layout_constraintStart_toStartOf="@id/btnWeekly"
+                app:layout_constraintTop_toBottomOf="@id/btnWeekly"
+                app:shapeAppearanceOverlay="@style/CircleImageview"
+                app:strokeColor="#febb3a"
+                app:strokeWidth="3dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/crown"
+                app:layout_constraintBottom_toTopOf="@id/ivFirstLiner"
+                app:layout_constraintEnd_toEndOf="@id/ivFirstLiner"
+                app:layout_constraintStart_toStartOf="@id/ivFirstLiner" />
+
+            <TextView
+                android:id="@+id/tvFirstBadge"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/circle_top_first"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivFirstLiner"
+                app:layout_constraintEnd_toEndOf="@id/ivFirstLiner"
+                app:layout_constraintStart_toStartOf="@id/ivFirstLiner"
+                app:layout_constraintTop_toBottomOf="@id/ivFirstLiner" />
+
+            <TextView
+                android:id="@+id/tvFirstsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sophia"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvFirstBadge"
+                app:layout_constraintStart_toStartOf="@id/tvFirstBadge"
+                app:layout_constraintTop_toBottomOf="@id/tvFirstBadge" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scoreFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/score_top_first_bg"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="7dp"
+                app:layout_constraintEnd_toEndOf="@id/tvFirstsName"
+                app:layout_constraintStart_toStartOf="@id/tvFirstsName"
+                app:layout_constraintTop_toBottomOf="@id/tvFirstsName">
+
+                <ImageView
+                    android:id="@+id/ivScore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/garnet"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvScore1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvScore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="4401"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/ivScore1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivScore1"
+                    app:layout_constraintTop_toTopOf="@id/ivScore1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivSecondLiner"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivFirstLiner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivFirstLiner"
+                app:layout_constraintTop_toTopOf="@id/ivFirstLiner"
+                app:shapeAppearanceOverlay="@style/CircleImageview"
+                app:strokeColor="#BFBFC0"
+                app:strokeWidth="3dp" />
+
+            <TextView
+                android:id="@+id/tvSecondBadge"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/circle_top_second"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivSecondLiner"
+                app:layout_constraintEnd_toEndOf="@id/ivSecondLiner"
+                app:layout_constraintStart_toStartOf="@id/ivSecondLiner"
+                app:layout_constraintTop_toBottomOf="@id/ivSecondLiner" />
+
+            <TextView
+                android:id="@+id/tvSecondsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sophia"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvSecondBadge"
+                app:layout_constraintStart_toStartOf="@id/tvSecondBadge"
+                app:layout_constraintTop_toBottomOf="@id/tvSecondBadge" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scoreSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/score_top_second_bg"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="7dp"
+                app:layout_constraintEnd_toEndOf="@id/tvSecondsName"
+                app:layout_constraintStart_toStartOf="@id/tvSecondsName"
+                app:layout_constraintTop_toBottomOf="@id/tvSecondsName">
+
+                <ImageView
+                    android:id="@+id/ivScore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/garnet"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvScore2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvScore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="4401"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/ivScore2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivScore2"
+                    app:layout_constraintTop_toTopOf="@id/ivScore2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/leaderView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="110dp"
+
+                app:layout_constraintTop_toBottomOf="@id/scoreFirst"></androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottomMenu"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bottom_bg"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:cnb_iconSize="20dp"
+        app:cnb_menuResource="@menu/bottom_menu"
+        app:cnb_radius="50dp"
+        app:cnb_unselectedColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
