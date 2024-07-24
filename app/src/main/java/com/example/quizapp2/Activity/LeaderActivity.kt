@@ -55,7 +55,7 @@ class LeaderActivity : AppCompatActivity() {
                 .load(drawableResourceId3)
                 .into(ivThirdLiner)
 
-            bottomMenu.setItemSelected(R.id.board)
+            bottomMenu.setItemSelected(R.id.board)//girdideki itemin başta seçili olmasını sağlar
 
             // ChipNavigationBar item selection listener
             bottomMenu.setOnItemSelectedListener { id ->
